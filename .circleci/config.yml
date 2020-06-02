@@ -36,8 +36,8 @@ jobs:
       - run: ./gradlew clean build
       - run: snyk test --sub-project=template-core --print-deps --json > snykTestResults || true
       - store_artifacts:
-        path: snykTestResults
-        destination: snykTestResults
+          path: snykTestResults
+          destination: snykTestResults
       - save_cache:
           paths:
             - ~/.gradle
