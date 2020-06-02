@@ -11,12 +11,13 @@ jobs:
     steps:
     - name: Snyk prevent
       id: snyk-prevent
-      uses: snyk-tech-services/github-actions-snyk-prevent-job-from-circleci@master
+      uses: snyk-tech-services/github-actions-snyk-prevent-job-from-circleci@debug/Add-traces
       with:
         ghToken: ${{ secrets.ghToken }}
         snykToken: ${{ secrets.snykToken }}
         circleCIToken: ${{ secrets.circleCIToken }}
         workflowName: workflow
+
         snykTestOutputFilename: snykTestResults
         # snykArguments: "--severity-threshold=high"
         # breakBuild: false
