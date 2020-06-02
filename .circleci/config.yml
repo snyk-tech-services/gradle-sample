@@ -3,6 +3,8 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2
+orbs:
+    snyk: snyk/snyk@0.0.8
 jobs:
   build:
     docker:
@@ -32,7 +34,10 @@ jobs:
             - v1-dependencies-
 
       - run: ./gradlew clean build
-
+      - run: snyk test --sub-project=template-core --print-deps --json > snykTestResults || true
+      - store_artifacts:
+        path: snykTestResults
+        destination: snykTestResults
       - save_cache:
           paths:
             - ~/.gradle
