@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1591092388141" analysisTimestamp="1591092388171" release="">
+  <Project projectName="">
+    <Jar>/home/antoine/Documents/SnykTSDev/Playgrounds/gradle-sample/template-core/build/classes/java/main</Jar>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j-impl/2.9.1/a97a849b18b3798c4af1a2ca5b10c66cef17e3a/log4j-slf4j-impl-2.9.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.9.1/c041978c686866ee8534f538c6220238db3bb6be/log4j-core-2.9.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.9.1/7a2999229464e7a324aa503c0a52ec0f05efe7bd/log4j-api-2.9.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/23.0/c947004bb13d18182be60077ade044099e4f26f1/guava-23.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.0.18/5f65affce1684999e2f4024983835efc3504012e/error_prone_annotations-2.0.18.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/ed28ded51a8b1c6b112568def5f4b455e6809019/j2objc-annotations-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar</AuxClasspathEntry>
+    <SrcDir>/home/antoine/Documents/SnykTSDev/Playgrounds/gradle-sample/template-core/src/main/java/io/jeffchao/template/core/Core.java</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 2 Jun 2020 12:06:28 +0200" total_classes="1" referenced_classes="12" total_bugs="0" total_size="6" num_packages="1" java_version="1.8.0_252" vm_version="25.252-b09" cpu_seconds="6.91" clock_seconds="1.53" peak_mbytes="103.90" alloc_mbytes="3492.00" gc_seconds="0.01">
+    <PackageStats package="io.jeffchao.template.core" total_bugs="0" total_types="1" total_size="6">
+      <ClassStats class="io.jeffchao.template.core.Core" sourceFile="Core.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="268" invocations="331" avgMicrosecondsPerInvocation="810" maxMicrosecondsPerInvocation="18414" standardDeviationMircosecondsPerInvocation="1699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="93" invocations="12" avgMicrosecondsPerInvocation="7822" maxMicrosecondsPerInvocation="24984" standardDeviationMircosecondsPerInvocation="8571"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="74" invocations="332" avgMicrosecondsPerInvocation="224" maxMicrosecondsPerInvocation="715" standardDeviationMircosecondsPerInvocation="99"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="72" invocations="60" avgMicrosecondsPerInvocation="1205" maxMicrosecondsPerInvocation="7222" standardDeviationMircosecondsPerInvocation="1235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="58" invocations="12" avgMicrosecondsPerInvocation="4898" maxMicrosecondsPerInvocation="19340" standardDeviationMircosecondsPerInvocation="5465"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="48" invocations="300" avgMicrosecondsPerInvocation="160" maxMicrosecondsPerInvocation="2572" standardDeviationMircosecondsPerInvocation="297"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="43" invocations="2" avgMicrosecondsPerInvocation="21868" maxMicrosecondsPerInvocation="42760" standardDeviationMircosecondsPerInvocation="20892"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="42" invocations="28" avgMicrosecondsPerInvocation="1502" maxMicrosecondsPerInvocation="23208" standardDeviationMircosecondsPerInvocation="4375"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="35" invocations="12" avgMicrosecondsPerInvocation="2999" maxMicrosecondsPerInvocation="9515" standardDeviationMircosecondsPerInvocation="2937"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="30" invocations="12" avgMicrosecondsPerInvocation="2579" maxMicrosecondsPerInvocation="11719" standardDeviationMircosecondsPerInvocation="3588"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="29" invocations="12" avgMicrosecondsPerInvocation="2495" maxMicrosecondsPerInvocation="10905" standardDeviationMircosecondsPerInvocation="3095"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="25" invocations="12" avgMicrosecondsPerInvocation="2084" maxMicrosecondsPerInvocation="5917" standardDeviationMircosecondsPerInvocation="2011"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

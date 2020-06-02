@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.1" sequence="0" timestamp="1591092398483" analysisTimestamp="1591092398507" release="">
+  <Project projectName="">
+    <Jar>/home/antoine/Documents/SnykTSDev/Playgrounds/gradle-sample/template-server/build/classes/java/main</Jar>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j-impl/2.9.1/a97a849b18b3798c4af1a2ca5b10c66cef17e3a/log4j-slf4j-impl-2.9.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.9.1/c041978c686866ee8534f538c6220238db3bb6be/log4j-core-2.9.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.9.1/7a2999229464e7a324aa503c0a52ec0f05efe7bd/log4j-api-2.9.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/23.0/c947004bb13d18182be60077ade044099e4f26f1/guava-23.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.0.18/5f65affce1684999e2f4024983835efc3504012e/error_prone_annotations-2.0.18.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.1/ed28ded51a8b1c6b112568def5f4b455e6809019/j2objc-annotations-1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/antoine/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.14/775b7e22fb10026eed3f86e8dc556dfafe35f2d5/animal-sniffer-annotations-1.14.jar</AuxClasspathEntry>
+    <SrcDir>/home/antoine/Documents/SnykTSDev/Playgrounds/gradle-sample/template-server/src/main/java/io/jeffchao/template/server/Server.java</SrcDir>
+  </Project>
+  <BugInstance type="DM_BOXED_PRIMITIVE_FOR_PARSING" priority="1" rank="16" abbrev="Bx" category="PERFORMANCE">
+    <Class classname="io.jeffchao.template.server.Server">
+      <SourceLine classname="io.jeffchao.template.server.Server" start="11" end="20" sourcefile="Server.java" sourcepath="io/jeffchao/template/server/Server.java"/>
+    </Class>
+    <Method classname="io.jeffchao.template.server.Server" name="main" signature="([Ljava/lang/String;)V" isStatic="true">
+      <SourceLine classname="io.jeffchao.template.server.Server" start="14" end="20" startBytecode="0" endBytecode="172" sourcefile="Server.java" sourcepath="io/jeffchao/template/server/Server.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="intValue" signature="()I" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.Integer" start="893" end="893" startBytecode="0" endBytecode="28" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <Method classname="java.lang.Integer" name="parseInt" signature="(Ljava/lang/String;)I" isStatic="true" role="SHOULD_CALL"/>
+    <SourceLine classname="io.jeffchao.template.server.Server" start="15" end="15" startBytecode="20" endBytecode="20" sourcefile="Server.java" sourcepath="io/jeffchao/template/server/Server.java"/>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N">
+    <Class classname="io.jeffchao.template.server.Server$MyHandler">
+      <SourceLine classname="io.jeffchao.template.server.Server$MyHandler" start="22" end="30" sourcefile="Server.java" sourcepath="io/jeffchao/template/server/Server.java"/>
+    </Class>
+    <Method classname="io.jeffchao.template.server.Server$MyHandler" name="handle" signature="(Lcom/sun/net/httpserver/HttpExchange;)V" isStatic="false">
+      <SourceLine classname="io.jeffchao.template.server.Server$MyHandler" start="25" end="30" startBytecode="0" endBytecode="124" sourcefile="Server.java" sourcepath="io/jeffchao/template/server/Server.java"/>
+    </Method>
+    <Method classname="java.lang.String" name="getBytes" signature="()[B" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.lang.String" start="958" end="958" startBytecode="0" endBytecode="37" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Method>
+    <SourceLine classname="io.jeffchao.template.server.Server$MyHandler" start="28" end="28" startBytecode="22" endBytecode="22" sourcefile="Server.java" sourcepath="io/jeffchao/template/server/Server.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 2 Jun 2020 12:06:38 +0200" total_classes="2" referenced_classes="21" total_bugs="2" total_size="21" num_packages="1" java_version="1.8.0_252" vm_version="25.252-b09" cpu_seconds="7.42" clock_seconds="1.65" peak_mbytes="104.93" alloc_mbytes="3492.00" gc_seconds="0.02" priority_1="2">
+    <PackageStats package="io.jeffchao.template.server" total_bugs="2" total_types="2" total_size="21" priority_1="2">
+      <ClassStats class="io.jeffchao.template.server.Server" sourceFile="Server.java" interface="false" size="11" bugs="1" priority_1="1"/>
+      <ClassStats class="io.jeffchao.template.server.Server$MyHandler" sourceFile="Server.java" interface="false" size="10" bugs="1" priority_1="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="311" invocations="351" avgMicrosecondsPerInvocation="887" maxMicrosecondsPerInvocation="23998" standardDeviationMircosecondsPerInvocation="1999"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="82" invocations="353" avgMicrosecondsPerInvocation="235" maxMicrosecondsPerInvocation="679" standardDeviationMircosecondsPerInvocation="105"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="81" invocations="21" avgMicrosecondsPerInvocation="3883" maxMicrosecondsPerInvocation="22209" standardDeviationMircosecondsPerInvocation="6649"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="68" invocations="62" avgMicrosecondsPerInvocation="1111" maxMicrosecondsPerInvocation="5531" standardDeviationMircosecondsPerInvocation="1214"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="57" invocations="319" avgMicrosecondsPerInvocation="181" maxMicrosecondsPerInvocation="2573" standardDeviationMircosecondsPerInvocation="344"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="50" invocations="21" avgMicrosecondsPerInvocation="2418" maxMicrosecondsPerInvocation="15804" standardDeviationMircosecondsPerInvocation="4176"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="48" invocations="4" avgMicrosecondsPerInvocation="12199" maxMicrosecondsPerInvocation="47035" standardDeviationMircosecondsPerInvocation="20119"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="47" invocations="42" avgMicrosecondsPerInvocation="1125" maxMicrosecondsPerInvocation="28304" standardDeviationMircosecondsPerInvocation="4384"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="27" invocations="21" avgMicrosecondsPerInvocation="1315" maxMicrosecondsPerInvocation="9757" standardDeviationMircosecondsPerInvocation="2414"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="26" invocations="4" avgMicrosecondsPerInvocation="6540" maxMicrosecondsPerInvocation="21207" standardDeviationMircosecondsPerInvocation="8538"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="24" invocations="21" avgMicrosecondsPerInvocation="1171" maxMicrosecondsPerInvocation="13318" standardDeviationMircosecondsPerInvocation="2887"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="23" invocations="21" avgMicrosecondsPerInvocation="1138" maxMicrosecondsPerInvocation="10081" standardDeviationMircosecondsPerInvocation="2398"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="23" invocations="4" avgMicrosecondsPerInvocation="5785" maxMicrosecondsPerInvocation="20048" standardDeviationMircosecondsPerInvocation="8262"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

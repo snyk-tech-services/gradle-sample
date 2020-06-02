@@ -1,0 +1,11 @@
+apply plugin: 'application'
+
+mainClassName = 'io.jeffchao.template.core.Core'
+
+dependencies {
+  //implementation 'org.springframework:spring-core:2.5'
+}
+
+run.doFirst {
+  // Environment variables go here.
+}
