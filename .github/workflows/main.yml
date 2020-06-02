@@ -1,0 +1,23 @@
+name: Snyk-TS-PR-Check
+
+on: 
+  pull_request:
+    types: [opened,reopened,synchronized]
+  
+jobs:
+  snyk_check:
+    runs-on: ubuntu-latest
+    name: Snyk PR Check
+    steps:
+    - name: Snyk prevent
+      id: snyk-prevent
+      uses: snyk-tech-services/github-actions-snyk-prevent-job-from-circleci@master
+      with:
+        ghToken: ${{ secrets.ghToken }}
+        snykToken: ${{ secrets.snykToken }}
+        circleCIToken: ${{ secrets.circleCIToken }}
+        workflowName: workflow
+        snykTestOutputFilename: snykTestResults
+        # snykArguments: "--severity-threshold=high"
+        # breakBuild: false
+        # fullScan: false
