@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Snyk prevent
       id: snyk-prevent
-      uses: snyk-tech-services/github-actions-snyk-prevent-job-from-circleci@bump-snyk-delta
+      uses: snyk-tech-services/github-actions-snyk-prevent-job-from-circleci@master
       with:
         ghToken: ${{ secrets.ghToken }}
         snykToken: ${{ secrets.snykToken }}
