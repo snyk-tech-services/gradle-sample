@@ -34,10 +34,10 @@ jobs:
             - v1-dependencies-
 
       - run: ./gradlew clean build
-      - snyk/scan:
-          fail-on-issues: false
-          monitor-on-build: false
-          token-variable: SNYK_TOKEN
+    #   - snyk/scan:
+    #       fail-on-issues: false
+    #       monitor-on-build: false
+    #       token-variable: SNYK_TOKEN
       - run: snyk test --sub-project=template-core --print-deps --json > snykTestResults || true
       - store_artifacts:
           path: snykTestResults
