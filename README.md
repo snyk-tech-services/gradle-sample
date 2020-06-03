@@ -1,12 +1,15 @@
 # Demo for github-actions-snyk-prevent-job-from-circleci
 
 Sample gradle project with CircleCI pipeline saving the test output for snyk to pick up in github action.
+[Example PR](https://github.com/snyk-tech-services/gradle-sample/pull/9)
 
 ![](https://storage.googleapis.com/snyk-technical-services.appspot.com/sample-gradle-gh-action-snyk-prevent-readme.png)
 
 # How to use the action?
 ## Action
 [github.com/snyk-tech-services/github-actions-snyk-prevent-job-from-circleci](https://github.com/snyk-tech-services/github-actions-snyk-prevent-job-from-circleci)
+
+
 
 > The action checks on the Circle CI test suite, polling and waiting for the specified CircleCI workflow to complete successfully. See below the way to configure the Snyk Orb to achieve this behavior.
 
