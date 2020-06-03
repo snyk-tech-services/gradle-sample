@@ -2,6 +2,8 @@
 
 Sample gradle project with CircleCI pipeline saving the test output for snyk to pick up in github action.
 
+![](https://storage.googleapis.com/snyk-technical-services.appspot.com/sample-gradle-gh-action-snyk-prevent-readme.png)
+
 # How to use the action?
 ## Action
 [github.com/snyk-tech-services/github-actions-snyk-prevent-job-from-circleci](https://github.com/snyk-tech-services/github-actions-snyk-prevent-job-from-circleci)
